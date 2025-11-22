@@ -2,8 +2,6 @@
 
 CPU-only Schwarzschild ray tracer that runs in the browser (Vite + React). Photons are traced by numerically integrating the null geodesic ODEs in Schwarzschild spacetime using an RK4 integrator running inside Web Workers. The UI exposes the main physical parameters (mass, camera pose, disk geometry, integration settings) and offers presets for quick previews vs. higher quality renders.
 
-> **Status**: The core renderer, UI, Web Worker orchestration, and integrator unit test are complete and working. Documentation, long-form derivations, demo media, and extended test coverage still need to be written. Example renders exist only as ad‑hoc local outputs.
-
 ## Features
 - Full Schwarzschild metric in geometric units (`G = c = 1`) with analytic Christoffel symbols and null-geodesic ODEs (`src/core/geodesic.js`).
 - Fourth-order Runge–Kutta integrator with adaptive pass cadence to balance speed and accuracy (`src/core/integrator.js`, `src/render/renderer.js`).
@@ -21,5 +19,4 @@ src/
   ui/            # React components, styles, parameter controls
 tests/           # Vitest specs (RK4 integrator test today)
 scripts/         # Offline rendering CLI
-examples/        # Placeholder for generated frames/metadata
 ```
